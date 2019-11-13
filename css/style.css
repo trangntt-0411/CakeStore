@@ -551,21 +551,278 @@ a i {
 /*=================================
     PRODUCT
 ===================================*/
+.bread-crumb {
+    font-size: 15px;
+    background: aliceblue;
+}
+.breadcrumb {
+    background: aliceblue;
+    padding-bottom: 0;
+}
+.pageago a {
+    font-size: 15px;
+    margin-right: 10px;
+}
+.pageago .sp i {
+    font-weight: bold;
+    margin-right: 10px;
+}
+.pagenow {
+    font-weight: 300;
+    color: blue;
+}
+.product_sidebar {
+    margin-top: 30px;
+    background: aliceblue;
+    padding-top: 20px;
+}
+.sidebar-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+.sidebar-content ul {
+    list-style: none;
+    font-size: 15px;
+    margin-top: 15px;
+}
+.sidebar-content ul li {
+    margin-top: 10px;
+}
+.filter-item {
+    display: block;
+    position: relative;
+    /* width: 19%; */
+    margin: 0 auto;
+}
+input[type=radio] {
+    position: absolute;
+    visibility: hidden;
+}
+input[type=checkbox] {
+    position: absolute;
+    visibility: hidden;
+}
+
+label {
+    display: block;
+    position: relative;
+    font-size: 16px;
+    line-height: 10px;
+    padding: 5px 10px 5px 30px;
+    margin: 5px auto;
+    height: 30px;
+    z-index: 9;
+    cursor: pointer;
+    -webkit-transition: all 0.25s linear;
+}
+.circle {
+    margin-left: -27px;
+}
+/* .outer-circle::before,.circle::before,.circle_price::before {
+    display: block;
+    position: absolute;
+    content: '';
+    border-radius: 100%;
+    height: 8px;
+    width: 8px;
+    top: 2px;
+    left: 2px;
+    margin: auto;
+    transition: background 0.25s linear;
+    -webkit-transition: background 0.25s linear;
+} */
+.click-circle:before {
+    content: '';
+    margin: -4px -30px;
+    border-radius: 50%;
+    border: 5px solid #aaa;
+    line-height: 40px;
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    background: #fff;
+}
+.click-circle::after {
+    content: "";
+    border-radius: 50%;
+    background: #6394F8;
+}
+.outer-circle {
+    display: block;
+    position: absolute;
+    border-radius: 100%;
+    height: 18px;
+    width: 18px;
+    margin-top: -34px;
+    border: 3px solid #AAAAAA;
+    -webkit-transition: all 0.25s linear;
+}
+
+input[type=radio].circle_price:checked ~ .outer-circle {
+    border: 3px solid #009999;
+}
+input[type=radio].circle:checked ~ .outer-circle::before{
+    background: #009999;
+}
+
+
+input[type=checkbox].circle:checked ~ .click-circle::before {
+    border: 5px solid dodgerblue;
+}
+input[type=checkbox].circle:checked ~ .click-circle::after {
+    background: blue;
+}
 
 
 
 
 
 /*=================================
-    BETA BANNER
+    SORT PRODUCT TYPE
 ===================================*/
+/* .pt_sort {
+    display: inline-block;
+    padding: 0;
+    margin-top: 10px;
+    width: 100%;
+    padding-bottom: 5px;
+}
+#sort {
+    float: left;
+    font-size: 12px;
+    text-align: left;
+}
+#sort label {
+    float: left;
+    font-weight: 400;
+    line-height: 33px;
+    font-size: 15px;
+    margin-right: 6px;
+    margin-bottom: 0;
+    color: #000;
+}
+#sort ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline;
+    float: right;
+}
+#sort li {
+    border: 1px solid #e5e5e5;
+    font-size: 13px;
+}
 
+#sort li:hover>ul {
+    visibility: visible;
+} */
+.pt_sort {
+    display: inline-block;
+    padding: 0;
+    width: 100%;
+    padding-bottom: 5px;
+}
+.h1_title {
+    font-size: 24px;
+    margin-top: 30px;
+    margin-left: 0px;
+}
+ul {
+    list-style: none;
+}
+#sort {
+    display: flex;
+    margin-top: 25px;
+}
+#sort label {
+    margin: 0;
+    padding-left: 0px;
+    font-size: 13px;
+}
+.col_ul {
+    display: inline;
+    float: right;
+    margin-top: -5px;
+}
+.col_ul li span {
+    margin-left: 15px;
+}
+
+#sort li {
+    width: 180px;
+    margin: 0 auto;
+    padding: 0 20px;
+    border: 1px solid #e5e5e5;
+    font-size: 13px;
+    color: #333;
+    position: relative;
+}
+#sort>ul>li {
+    padding: 5px;
+}
+#sort ul ul {
+    position: absolute;
+    visibility: hidden;
+    width: 180px;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    padding-left: 0;
+    left: -1px;
+    top: 30px;
+    z-index: 200;
+    background: #fff;
+}
+#sort li:hover>ul {
+    visibility: visible;
+}
+#sort li li {
+    width: 100%;
+    border-top: 0px;
+    border-right: none;
+    border-left: none;
+}
+#sort li>a{
+    display: inline-block;
+    width: 100%;
+    line-height: 36px;
+    transition: all 0s ease-in-out;
+}
+#sort li li a:hover {
+    color: blue;
+}
 
 
 /*=================================
-    BETA PROMOBOX
+    PAGINATION
 ===================================*/
-
+.paginate {
+    margin: 30px 0;
+    display: flex;
+}
+.paginate span {
+    font-size: 15px;
+    font-weight: 500;
+    margin-right: 10px;
+    padding-top: 4px;
+}
+.paginate .pagination {
+    margin-bottom: 0;
+}
+.pagination li a {
+    background: dodgerblue;
+    border-color: dodgerblue;
+    color: #fff;
+    display: block;
+    border: 0;
+}
+.pagination .page_link {
+    margin: 0 2.5px;
+    width: 30px;
+    font-size: 15px;
+    line-height: 30px;
+    text-align: center;
+    font-weight: 500;
+}
 
 
 /*=================================
