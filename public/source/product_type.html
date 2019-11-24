@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loại sản phẩm</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Dosis:300,400' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- header -->
+    <div id="header">
+        <div class="header-body">
+            <div class="container beta-relative">
+                <div class="pull-left">
+                    <!-- <a href="index.html" id="logo"><img src="images/logo-cake.png" width="200px"></a> -->
+                    <h1 class="logo">Name Store</h1>
+                </div>
+                <div class="pull-right beta-components space-left ov">
+                    <div class="space10">&nbsp;</div>
+                    <div class="beta-comp">
+                        <form role="search" method="GET" id="searchform" action="/">
+                            <input type="text" value="" name="s" id="s" placeholder="Nhập từ khóa...">
+                            <!-- <button class="fa fa-search" type="submit" id="searchsubmit"></button> -->
+                            <button class="search">Tìm</button>
+                        </form>
+                    </div>
+                    <div class="beta-comp">
+                        <div class="cart" id="cart">
+                            <div class="cart-select"><i class="fa fa-shopping-cart cart-icon"></i>Giỏ hàng<span class="badge">3</span></div>
+                            <div class="cart-dropdown" id="cart-drop">
+                                <!-- <div class="cart-header">
+                                        <i class="fa fa-shopping-cart cart-icon"></i><span class="badge">3</span>
+                                        <div class="cart-total">
+                                            <span class="total">Total:</span>
+                                            <span class="total-money">$2,229.97</span>
+                                        </div>
+                                    </div>
+                                <ul class="cart-items">
+                                    <li class="">
+                                        <img src="images/products/cart/1.png" alt="item1">
+                                        <span class="item-name">Sample Woman Top</span>
+                                        <span class="item-price">$59.99</span>
+                                        <span class="item-quantity">Số lượng: 01</span>
+                                    </li>
+                                    <li class="">
+                                            <img src="images/products/cart/1.png" alt="item1">
+                                            <span class="item-name">Sample Woman Top</span>
+                                            <span class="item-price">$59.99</span>
+                                            <span class="item-quantity">Số lượng: 01</span>
+                                    </li>
+                                    <li class="">
+                                            <img src="images/products/cart/1.png" alt="item1">
+                                            <span class="item-name">Sample Woman Top</span>
+                                            <span class="item-price">$59.99</span>
+                                            <span class="item-quantity">Số lượng: 01</span>
+                                    </li>
+                                </ul>
+                                <a href="" class="checkout">Checkout</a> -->
+                                <ul class="cart-items">
+                                    <li>
+                                        <img src="images/products/cart/1.png" alt="item1">
+                                        <span class="item-name">Sample Woman Top</span>
+                                        <span class="item-price">$59.99</span>
+                                        <span class="item-quantity">Số lượng: 01</span>
+                                    </li>
+                                    <li>
+                                            <img src="images/products/cart/1.png" alt="item1">
+                                            <span class="item-name">Sample Woman Top</span>
+                                            <span class="item-price">$59.99</span>
+                                            <span class="item-quantity">Số lượng: 01</span>
+                                    </li>
+                                    <li>
+                                            <img src="images/products/cart/1.png" alt="item1">
+                                            <span class="item-name">Sample Woman Top</span>
+                                            <span class="item-price">$59.99</span>
+                                            <span class="item-quantity">Số lượng: 01</span>
+                                    </li>
+                                </ul>
+                                <div class="caption-cart">
+                                    <div class="cart-total">Tổng tiền: <span>125000 đồng</span></div>
+                                    <div class="clearfix"></div>
+                                    <div class="cart-order">
+                                        <button class="order">Đặt hàng</button>
+                                    </div>
+                                </div>
+                                <!-- <div class="cart-item" style="height:20px;background: gray;">hello</div>
+                                <div class="cart-item" style="height:20px;background: gray;">hello</div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="header-bottom" style="background: #0277b8;">
+            <div class="container">
+                <nav class="main-menu">
+                    <ul class="l-inline ov">
+                        <li class="parent-active"><a href="index.html">Trang chủ</a></li>
+                        <li><a href="">Sản phẩm</a>
+                            <ul class="sub-menu">
+                                <li><a href="product_type.html">Sản phẩm 1</a></li>
+                                <li><a href="product_type.html">Sản phẩm 2</a></li>
+                                <li><a href="product_type.html">Sản phẩm 3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="about.html">Giới thiệu</a></li>
+                        <li><a href="contacts.html">Liên hệ</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- end header -->
+    <div class="bread-crumb">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <ul class="breadcrumb">
+                        <li class="pageago">
+                            <a href="index.html">Trang chủ</a>
+                            <span class="sp">
+                                <i class="fa fa-angle-right"></i>
+                            </span>
+                        </li>
+                        <li class="pagenow">
+                            <strong><span>Sản phẩm 1</span></strong>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- content -->
+    <div class="container">
+        <div class="row">
+            <div class="product_sidebar col-lg-3">
+                <div class="p_sidebar">
+                    <div class="list_sp">
+                        <div class="sidebar-title">
+                            <span>Danh mục sản phẩm</span>
+                        </div>
+                        <div class="sidebar-content">
+                            <ul class="list-producttype">
+                                <li class="item-producttype"><a href="">Sản phẩm 1</a></li>
+                                <li class="item-producttype"><a href="">Sản phẩm 2</a></li>
+                                <li class="item-producttype"><a href="">Sản phẩm 3</a></li>
+                                <li class="item-producttype"><a href="">Sản phẩm 4</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="filter_size">
+                        <div class="sidebar-title">
+                            <span>Kích cỡ</span>
+                        </div>
+                        <div class="sidebar-content">
+                            <ul>
+                                <li class="filter-item">
+                                    <label class="lon">          
+                                        <input type="checkbox" id="lon" class="circle" checked name="selector">
+                                        <!-- <label for="lon">Lớn</label> -->
+                                        <i class="click-circle"></i>Lớn
+                                    </label>
+                                </li>
+                                <li class="filter-item">
+                                    <label for="trungbinh">
+                                        <input type="checkbox" id="trungbinh" class="circle" checked name="selector">
+                                        <i class="click-circle"></i>Trung bình
+                                    </label>
+                                </li>
+                                <li class="filter-item">
+                                    <label for="nho">
+                                    <input type="checkbox" id="nho" class="circle" checked name="selector">
+                                    <i class="click-circle"></i>Nhỏ
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="filter-price">
+                        <div class="sidebar-title">
+                            <span>Theo giá</span>
+                        </div>
+                        <div class="sidebar-content">
+                            <ul>
+                                <li class="filter-item">
+                                    <label for="filter_duoi100">         
+                                    <input type="checkbox" id="filter_duoi100" class="circle" checked name="selector">
+                                    <i class="click-circle"></i>Gía dưới 100.000đ 
+                                    </label>
+                                </li>
+                                <li class="filter-item">
+                                    <label for="filter_100den200">
+                                    <input type="checkbox" id="filter_100den200" class="circle" checked name="selector">
+                                    <i class="click-circle"></i>100.000đ - 200.000đ
+                                    </label>
+                                </li>
+                                <li class="filter-item">
+                                    <label for="filter_200den300">
+                                    <input type="checkbox" id="filter_200den300" class="circle" checked name="selector">                                  
+                                    <i class="click-circle"></i>200.000đ - 300.000đ
+                                    </label>
+                                </li>
+                                <li class="filter-item">
+                                    <label for="filter_lon300">
+                                    <input type="checkbox" id="filter_lon300" class="circle" checked name="selector">
+                                    <i class="click-circle"></i>Gía trên 300.000đ
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product_main col-lg-9">
+                <h1 class="h1_title">Sản phẩm 1</h1>
+                <div class="product_type">
+                    <section>
+                        <div class="pt_sort">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div id="sort">
+                                        <label>Sắp xếp:</label>
+                                        <ul class="col_ul">
+                                            <li>
+                                                <span>Mặc định</span>
+                                                <ul class="content_ul">
+                                                    <li>
+                                                        <a href="">Mặc định</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">A -> Z</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">Z -> A</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">Gía tăng dần</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">Gía giảm dần</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">Hàng mới nhất</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">Hàng cũ nhất</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="pt_view">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="product">
+                                    <div class="product-header">
+                                        <a href="product.html"><img src="images/products/1.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-body">
+                                        <p class="product-title">Sample Woman Top</p>
+                                        <p class="product-price">
+                                            <span>$12.34</span>
+                                        </p>
+                                    </div>
+                                    <div class="product-caption">
+                                        <a class="add-to-cart" href="cart.html">
+                                            <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                        <!-- <a class="beta-btn primary" href="product.html">Details<i class="fa fa-chevron-right"></i></a> -->
+                                        <a class="bt-details" href="#">Chi tiết<i class="fa fa-chevron-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                    <div class="product">
+                                        <div class="product-header">
+                                            <a href="product.html"><img src="images/products/1.jpg" alt=""></a>
+                                        </div>
+                                        <div class="product-body">
+                                            <p class="product-title">Sample Woman Top</p>
+                                            <p class="product-price">
+                                                <span>$12.34</span>
+                                            </p>
+                                        </div>
+                                        <div class="product-caption">
+                                            <a class="add-to-cart" href="cart.html">
+                                                <i class="fa fa-shopping-cart"></i>
+                                            </a>
+                                            <!-- <a class="beta-btn primary" href="product.html">Details<i class="fa fa-chevron-right"></i></a> -->
+                                            <a class="bt-details" href="#">Chi tiết<i class="fa fa-chevron-right"></i></a>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="col-sm-3">
+                                    <div class="product">
+                                        <div class="product-header">
+                                            <a href="product.html"><img src="images/products/1.jpg" alt=""></a>
+                                        </div>
+                                        <div class="product-body">
+                                            <p class="product-title">Sample Woman Top</p>
+                                            <p class="product-price">
+                                                <span>$12.34</span>
+                                            </p>
+                                        </div>
+                                        <div class="product-caption">
+                                            <a class="add-to-cart" href="cart.html">
+                                                <i class="fa fa-shopping-cart"></i>
+                                            </a>
+                                            <!-- <a class="beta-btn primary" href="product.html">Details<i class="fa fa-chevron-right"></i></a> -->
+                                            <a class="bt-details" href="#">Chi tiết<i class="fa fa-chevron-right"></i></a>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="col-sm-3">
+                                    <div class="product">
+                                        <div class="product-header">
+                                            <a href="product.html"><img src="images/products/1.jpg" alt=""></a>
+                                        </div>
+                                        <div class="product-body">
+                                            <p class="product-title">Sample Woman Top</p>
+                                            <p class="product-price">
+                                                <span>$12.34</span>
+                                            </p>
+                                        </div>
+                                        <div class="product-caption">
+                                            <a class="add-to-cart" href="cart.html">
+                                                <i class="fa fa-shopping-cart"></i>
+                                            </a>
+                                            <!-- <a class="beta-btn primary" href="product.html">Details<i class="fa fa-chevron-right"></i></a> -->
+                                            <a class="bt-details" href="#">Chi tiết<i class="fa fa-chevron-right"></i></a>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="space-50"></div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="product">
+                                    <div class="product-header">
+                                        <a href="product.html"><img src="images/products/1.jpg" alt=""></a>
+                                    </div>
+                                    <div class="product-body">
+                                        <p class="product-title">Sample Woman Top</p>
+                                        <p class="product-price">
+                                            <span>$12.34</span>
+                                        </p>
+                                    </div>
+                                    <div class="product-caption">
+                                        <a class="add-to-cart" href="cart.html">
+                                            <i class="fa fa-shopping-cart"></i>
+                                        </a>
+                                        <!-- <a class="beta-btn primary" href="product.html">Details<i class="fa fa-chevron-right"></i></a> -->
+                                        <a class="bt-details" href="#">Chi tiết<i class="fa fa-chevron-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                    <div class="product">
+                                        <div class="product-header">
+                                            <a href="product.html"><img src="images/products/1.jpg" alt=""></a>
+                                        </div>
+                                        <div class="product-body">
+                                            <p class="product-title">Sample Woman Top</p>
+                                            <p class="product-price">
+                                                <span>$12.34</span>
+                                            </p>
+                                        </div>
+                                        <div class="product-caption">
+                                            <a class="add-to-cart" href="cart.html">
+                                                <i class="fa fa-shopping-cart"></i>
+                                            </a>
+                                            <!-- <a class="beta-btn primary" href="product.html">Details<i class="fa fa-chevron-right"></i></a> -->
+                                            <a class="bt-details" href="#">Chi tiết<i class="fa fa-chevron-right"></i></a>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="col-sm-3">
+                                    <div class="product">
+                                        <div class="product-header">
+                                            <a href="product.html"><img src="images/products/1.jpg" alt=""></a>
+                                        </div>
+                                        <div class="product-body">
+                                            <p class="product-title">Sample Woman Top</p>
+                                            <p class="product-price">
+                                                <span>$12.34</span>
+                                            </p>
+                                        </div>
+                                        <div class="product-caption">
+                                            <a class="add-to-cart" href="cart.html">
+                                                <i class="fa fa-shopping-cart"></i>
+                                            </a>
+                                            <!-- <a class="beta-btn primary" href="product.html">Details<i class="fa fa-chevron-right"></i></a> -->
+                                            <a class="bt-details" href="#">Chi tiết<i class="fa fa-chevron-right"></i></a>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="col-sm-3">
+                                    <div class="product">
+                                        <div class="product-header">
+                                            <a href="product.html"><img src="images/products/1.jpg" alt=""></a>
+                                        </div>
+                                        <div class="product-body">
+                                            <p class="product-title">Sample Woman Top</p>
+                                            <p class="product-price">
+                                                <span>$12.34</span>
+                                            </p>
+                                        </div>
+                                        <div class="product-caption">
+                                            <a class="add-to-cart" href="cart.html">
+                                                <i class="fa fa-shopping-cart"></i>
+                                            </a>
+                                            <!-- <a class="beta-btn primary" href="product.html">Details<i class="fa fa-chevron-right"></i></a> -->
+                                            <a class="bt-details" href="#">Chi tiết<i class="fa fa-chevron-right"></i></a>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt_pagination">
+                        <div class="clear-both paginate">
+                            <span>Trang:</span>
+                            <ul class="pagination clear-both">
+                                <li class="page-item active">
+                                    <a class="page_link" href="">1</a>
+                                </li>
+                                <li class="page-item">
+                                    <a href="" class="page_link">2</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page_link" href="">
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end content -->
+
+    <!-- footer -->
+    <footer class="bground-footer">      
+        <div class="container ">
+            <div class="space-50"></div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="footer">
+                        <h4><span>Thông tin</span></h4>
+                        <ul class="list-info list-style">
+                            <li class="item-footer">
+                                <div class="company">
+                                    <i class="fa fa-map-marker ddiem"></i><span>Công ty ABC</span>
+                                </div>
+                                <div class="address">Địa chỉ: 123 Đường A - Hà Nội</div>
+                                <div class="phone">Hotline:<a href="tel:123456" title="phone">123456</a></div>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="footer">
+                        <h4><span>Đăng ký nhận tin</span></h4>
+                        <p>Đăng ký để cập nhật những thông tin mới nhất từ chúng tôi.</p>
+                        <form class="nhan-info" method="POST" action="">
+                            <input type="email" placeholder="Nhập địa chỉ mail của bạn" name="email" id="email">
+                            <button class="button-footer">
+                                <i class="fa fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="footer">
+                        <h4><span>Giới thiệu</span></h4>
+                        <ul class="list-menu-footer list-style" style="display:block;">
+                            <li><a href="">Trang chủ</a></li>
+                            <li><a href="">Sản phẩm</a></li>
+                            <li><a href="">Giới thiệu</a></li>
+                            <li><a href="">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="footer">
+                        <h4><span>Liên hệ</span></h4>
+                        <p>Thứ 2 - Thứ 6: 6am - 9pm
+                            <br>
+                            Thứ 7 - Chủ Nhật: 6am - 10pm
+                        </p>
+                        <ul class="list-media list-style">
+                            <li>
+                                <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/"><i class="fa fa-youtube"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="last-f">&copy; Design by Trang 2019</div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
