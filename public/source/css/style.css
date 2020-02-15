@@ -70,6 +70,12 @@ h4 {
 .space-20 {
     margin-top: 20px;
 }
+.space-20_bt {
+    margin-bottom: 20px;
+}
+.space-40 {
+    margin-top: 40px;
+}
 
 .space-50 {
     margin-top: 50px;
@@ -138,6 +144,11 @@ a i {
 .header-bottom {
     border-top: 1px solid #e3e3e3;
     border-bottom: 1px solid #e3e3e3;
+}
+
+/* slide */
+.w-100 {
+    height: 350px;
 }
 
 /*===================================
@@ -238,7 +249,7 @@ a i {
 
 
 /*===============================
-    PRODUCT RATTING
+    PRODUCT 
 =================================*/
 
 .list-product {
@@ -258,6 +269,7 @@ a i {
 
 .product-header img {
     transition: all 0.5 ease-in-out;
+    height: 200px;
 }
 
 .product-header:hover img {
@@ -279,6 +291,11 @@ a i {
     color: blue;
     text-align: center;
     font-weight: 500;
+}
+
+.p_unit_price {
+    font-size: 17px;
+    color: gray;
 }
 
 .product-caption {
@@ -342,6 +359,58 @@ a i {
 .link_product .pagination li a {
     background: lightskyblue;
 }
+
+.list-product h3 {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    color: blue;
+}
+
+.space_bt {
+    margin-bottom: 30px;
+}
+
+
+/*======================
+    PAGE PAGINATE
+========================*/
+.page_paginate {
+    margin-top: 30px;
+}
+
+.page-item.disabled .page-link {
+    font-size: 13px;
+    background-color: lightskyblue;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+}
+.page-item {
+    margin-right: 15px;
+}
+.page-item.active {
+    border-radius: 5px;
+}
+.page-item.active .page-link {
+    border-radius: 10px;
+    font-weight: bold;
+}
+.pagination li a {
+    background: lightskyblue !important;
+    border-color: lightskyblue !important;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+
+/*
+.disabled {
+    margin-right: 15px;
+}
+.page-item .page_link {
+    font-size: 10px;
+} */
 
 
 /*======================

@@ -12,28 +12,20 @@
 */
 
 Route::get('/', function () {
-    
     return view('welcome');
 });
 
 Route::get('index', [
-    'as'=>'trang-chu',
+    'as'=>'home-page',
     'uses'=>'PageController@getIndex'
 ]);
 
-Route::get('product-type/{type?}',[
-    'as'=>'loai_sp',
+Route::get('product-type/{type}',[
+    'as'=>'product-type',
     'uses'=>'PageController@getProductType'
 ]);
 
 Route::get('product/{id}',[
-    'as'=>'sanpham',
+    'as'=>'product',
     'uses'=>'PageController@getProduct'
 ]);
-
-Route::get('add-to-cart/{id}',[
-    'as'=>'addcart',
-    'uses'=>'PageController@getAddToCart'
-]);
-
-
