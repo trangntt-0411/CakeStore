@@ -9,44 +9,64 @@
             <div class="pull-right beta-components space-left ov">
                 <div class="space10">&nbsp;</div>
                 <div class="beta-comp">
-                    <form role="search" method="GET" id="searchform" action="/">
-                        <input type="text" value="" name="s" id="s" placeholder="Nhập từ khóa...">
+                    <form role="search" method="GET" id="searchform" action="{{route('search')}}">
+                        <input type="text" value="" name="key" id="s" placeholder="Nhập từ khóa...">
                         <!-- <button class="fa fa-search" type="submit" id="searchsubmit"></button> -->
                         <button class="search">Tìm</button>
                     </form>
                 </div>
+                <!-- account -->
+                <div class="beta-comp">
+                    <div class="account">
+                        @if(Auth::check())
+                        <a href="">
+                            <i class="fa fa-user cart-icon"><span class="icon-name">{{Auth::user()->full_name}}</span></i>
+                            <a href="{{route('logout')}}"><i class="fa fa-sign-out cart-icon"><span class="icon-name">Đăng xuất</span></i></a>
+                        </a>
+                        @else
+                        <a href="{{route('login')}}">
+                            <i class="fa fa-user cart-icon"><span class="icon-name">Tài khoản</span></i>
+                        </a>
+                        @endif
+                    </div>
+                </div>
                 <div class="beta-comp">
                     <div class="cart" id="cart">
-                        <div class="cart-select"><i class="fa fa-shopping-cart cart-icon"></i>Giỏ hàng<span class="badge">3</span></div>
+                   
+                        @if(Session::has('cart') && $totalQty != 0)
+                       
+                        <div class="cart-select"><i class="fa fa-shopping-cart cart-icon"><span class="icon-name">Giỏ hàng</span><span class="badge">{{Session('cart')->totalQty}}</span></i></div>
                         <div class="cart-dropdown" id="cart-drop">
                             <ul class="cart-items">
+                                @foreach($product_cart as $item)
                                 <li>
-                                    <img src="images/products/cart/1.png" alt="item1">
-                                    <span class="item-name">Sample Woman Top</span>
-                                    <span class="item-price">$59.99</span>
-                                    <span class="item-quantity">Số lượng: 01</span>
+                                   
+                                    <img src="{{URL::to('source/images/product')}}/{{$item['item']['image']}}" alt="item1">
+                                    <span class="item-name">{{$item['item']['name']}}</span>
+                                    <span class="item-price">@if($item['item']['promotion_price'] == 0)
+                                                                {{$item['item']['unit_price']}}đ
+                                                            @else
+                                                                {{$item['item']['promotion_price']}}đ
+                                                            @endif
+                                    </span>
+                                    <span class="item-quantity">Số lượng: {{$item['qty']}}</span>
+                                    <a href="{{route('removecart', $item['item']['id'])}}"><span class="icon-name"><i class="fa fa-trash" aria-hidden="true"></i></span></a>
+                                  
                                 </li>
-                                <li>
-                                        <img src="images/products/cart/1.png" alt="item1">
-                                        <span class="item-name">Sample Woman Top</span>
-                                        <span class="item-price">$59.99</span>
-                                        <span class="item-quantity">Số lượng: 01</span>
-                                </li>
-                                <li>
-                                        <img src="images/products/cart/1.png" alt="item1">
-                                        <span class="item-name">Sample Woman Top</span>
-                                        <span class="item-price">$59.99</span>
-                                        <span class="item-quantity">Số lượng: 01</span>
-                                </li>
+                                @endforeach
+                                
                             </ul>
                             <div class="caption-cart">
-                                <div class="cart-total">Tổng tiền: <span>125000 đồng</span></div>
+                                <div class="cart-total">Tổng tiền: <span>{{$totalPrice}}</span></div>
                                 <div class="clearfix"></div>
                                 <div class="cart-order">
                                     <button class="order">Đặt hàng</button>
                                 </div>
                             </div>
                         </div>
+                        @else
+                        <div class="cart-select"><i class="fa fa-shopping-cart cart-icon"><span class="icon-name">Giỏ hàng</span><span class="badge"></span></i></div>
+                        @endif
                     </div>
                 </div>
             </div>

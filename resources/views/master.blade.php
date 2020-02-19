@@ -82,7 +82,7 @@
                                         </p>
                                     </div>
                                     <div class="product-caption">
-                                        <a class="add-to-cart" href="cart.html">
+                                        <a class="add-to-cart" href="{{route('addcart', $item->id)}}">
                                             <i class="fa fa-shopping-cart"></i>
                                         </a>
                                         <a class="bt-details" href="product.html">Chi tiết<i class="fa fa-chevron-right"></i></a>
@@ -143,12 +143,33 @@
                         </div>
                     </div>
                     <!-- end sale product-->
+                    <div class="space-100"></div>              
 
-                    
+                    <div id="home-order">
+                        <div class="order-form">
+                            <div class="order-title title-text">
+                                <h3>Đặt online ngay!</h3>
+                            </div>
+                            <div class="order-content">
+                                <form>
+                                    <label for="ContactFormName">Họ tên</label>
+                                    <input type="text" id="ContactFormName" class="input-full">
+                                    <label for="ContactFormEmail">Địa chỉ email</label>
+                                    <input type="text" id="ContactFormEmail" class="input-full">
+                                    <label for="ContactFormPhone">Số điện thoại</label>
+                                    <input type="text" id="ContactFormPhone" class="input-full">
+                                    <label for="ContactFormMessage">Nội dung</label>
+                                    <textarea rows="5" id="ContactFormMessage" class="input-full"></textarea>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
         </div> 
     </div>
+
     <!-- end container -->
 
     <!-- start footer -->
@@ -156,7 +177,7 @@
     <!-- end footer -->
 
     
-    <script src="app.js"></script>
+    <script src="{{URL::to('source/app.js')}}"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>

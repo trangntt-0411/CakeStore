@@ -53,71 +53,11 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="filter_size">
-                        <div class="sidebar-title">
-                            <span>Kích cỡ</span>
-                        </div>
-                        <div class="sidebar-content">
-                            <ul>
-                                <li class="filter-item">
-                                    <label class="lon">          
-                                        <input type="checkbox" id="lon" class="circle" checked name="selector">
-                                        <!-- <label for="lon">Lớn</label> -->
-                                        <i class="click-circle"></i>Lớn
-                                    </label>
-                                </li>
-                                <li class="filter-item">
-                                    <label for="trungbinh">
-                                        <input type="checkbox" id="trungbinh" class="circle" checked name="selector">
-                                        <i class="click-circle"></i>Trung bình
-                                    </label>
-                                </li>
-                                <li class="filter-item">
-                                    <label for="nho">
-                                    <input type="checkbox" id="nho" class="circle" checked name="selector">
-                                    <i class="click-circle"></i>Nhỏ
-                                    </label>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="filter-price">
-                        <div class="sidebar-title">
-                            <span>Theo giá</span>
-                        </div>
-                        <div class="sidebar-content">
-                            <ul>
-                                <li class="filter-item">
-                                    <label for="filter_duoi100">         
-                                    <input type="checkbox" id="filter_duoi100" class="circle" checked name="selector">
-                                    <i class="click-circle"></i>Gía dưới 100.000đ 
-                                    </label>
-                                </li>
-                                <li class="filter-item">
-                                    <label for="filter_100den200">
-                                    <input type="checkbox" id="filter_100den200" class="circle" checked name="selector">
-                                    <i class="click-circle"></i>100.000đ - 200.000đ
-                                    </label>
-                                </li>
-                                <li class="filter-item">
-                                    <label for="filter_200den300">
-                                    <input type="checkbox" id="filter_200den300" class="circle" checked name="selector">                                  
-                                    <i class="click-circle"></i>200.000đ - 300.000đ
-                                    </label>
-                                </li>
-                                <li class="filter-item">
-                                    <label for="filter_lon300">
-                                    <input type="checkbox" id="filter_lon300" class="circle" checked name="selector">
-                                    <i class="click-circle"></i>Gía trên 300.000đ
-                                    </label>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                   
                 </div>
             </div>
             <div class="product_main col-lg-9">
-                <h1 class="h1_title"></h1>
+                <h1 class="h1_title">{{$p_type_now->name}}</h1>
                 <div class="product_type">
                     <section>
                         <div class="pt_sort">

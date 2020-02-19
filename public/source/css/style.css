@@ -80,6 +80,9 @@ h4 {
 .space-50 {
     margin-top: 50px;
 }
+.space-100 {
+    margin-top: 100px;
+}
 
 /*===============================
     TYPOGRAPHY
@@ -151,6 +154,7 @@ a i {
     height: 350px;
 }
 
+
 /*===================================
     NAVIGATION
 =====================================*/
@@ -172,6 +176,20 @@ a i {
     color: #fff;
     font-family: 'Open Sans', sans-serif;
 }
+
+/* account */
+.account {
+    margin-top: 10px;
+}
+
+.icon-name {
+    font-size: 18px;
+    margin-left: 5px;
+}
+.logout {
+    font-size: 18px;
+}
+
 
 
 /*==============================
@@ -435,23 +453,65 @@ a i {
 }
 
 
-
-
-
-
-
-
-/*===============================
-    BETA CART
-=================================*/
-
-/* .cart-body {
-    border: 1px solid #e1e1e1;
+/*================================
+    FORM
+==================================*/
+.content {
+    height: 450px;
+}
+#page-wrapper {
+    background: #e6e6e6;
+}
+.grid {
+    width: 100%;
+    text-align: center;
+}
+.grid_item {
+    left: 33.333%;
+    width: 33.333%;
+    display: inline-block;
+}
+.grid_item h1 {
+    color: #333333;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0 0 15px 0;
+    margin: 0 0 15px 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+.form-vertical input {
+    margin-bottom: 10px;
+    display: block;
+    background: #e6e6e6;
+    width: 100%;
+    border: none;
     height: 37px;
-    line-height: 37px;
-    padding: 0 10px;
-    cursor: pointer;
-} */
+    padding: 0 15px;
+}
+.btn-full {
+    width: 100%;
+}
+.btn {
+    padding: 8px 10px;
+    margin: 0;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    background-color: #515783 !important;
+    color: #fff;
+}
+.form-vertical a {
+    text-decoration: none;
+    color: blue;
+}
+
+
+
 
 
 /*=================================
@@ -630,7 +690,7 @@ a i {
     background: aquamarine;
     padding-left: 10px;
     width: 260px;
-    margin-top: 20px;
+    margin-top: 35px;
     margin-left: -143px;
     border-radius: 10px;
     display: none;
@@ -780,6 +840,49 @@ input[type=checkbox].circle:checked ~ .click-circle::after {
     background: blue;
 }
 
+
+
+/*=================================
+    ORDER PRODUCT
+===================================*/
+#home-order {
+    background-image: url("../images/slide/banner2.jpg");
+    height: 600px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 50px 0;
+}
+
+.order-form {
+    background: rgba(0, 0, 0, 0.5);
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    margin: 0 0 0 60px;
+    padding: 15px;
+}
+.title-text h3 {
+    font-size: 32px;
+    color: deepskyblue;
+    margin-bottom: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 20px 0 30px 0;
+}
+#home-order .order-content label {
+    display: block;
+    color: #fff;
+    margin-bottom: 5px;
+    padding: 15px 0 0 0;
+}
+.input-full {
+    border-radius: 10px;
+    outline: 0px;
+}
+.order-content form textarea {
+    height: 100%;
+}
 
 
 

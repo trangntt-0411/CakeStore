@@ -29,3 +29,50 @@ Route::get('product/{id}',[
     'as'=>'product',
     'uses'=>'PageController@getProduct'
 ]);
+
+
+Route::get('register',[
+    'as'=>'register',
+    'uses'=>'PageController@getRegister'
+]);
+
+Route::post('register',[
+    'as'=>'register',
+    'uses'=>'PageController@postRegister'
+]);
+
+Route::get('login', [
+    'as'=>'login',
+    'uses'=>'PageController@getLogin'
+]);
+
+Route::post('login',[
+    'as'=>'login',
+    'uses'=>'PageController@postLogin'
+]);
+
+Route::get('logout',[
+    'as'=>'logout',
+    'uses'=>'PageController@getLogout'
+]);
+
+Route::get('add-cart/{id}',[
+    'as'=>'addcart',
+    'uses'=>'PageController@getAddCart'
+]);
+
+Route::get('remove-item/{id}',[
+    'as'=>'removecart',
+    'uses'=>'PageController@getRemoveCart'
+]);
+
+
+
+Route::get('search', [
+    'as'=>'search',
+    'uses'=>'PageController@getSearch'
+]);
+
+
+
+

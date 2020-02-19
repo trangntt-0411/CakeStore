@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Trang chủ</title>
+        <!-- <base href="{{asset('')}}"/> -->
+    
+        <link href='http://fonts.googleapis.com/css?family=Dosis:300,400' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="header">
+        <div class="header-body">
+            <div class="container beta-relative">
+                <div class="pull-left">
+                    <!-- <a href="index.html" id="logo"><img src="images/logo-cake.png" width="200px"></a> -->
+                    <h1 class="logo">Name Store</h1>
+                </div>
+                <div class="pull-right beta-components space-left ov">
+                    <div class="space10">&nbsp;</div>
+                    <div class="beta-comp">
+                        <form role="search" method="GET" id="searchform" action="/">
+                            <input type="text" value="" name="s" id="s" placeholder="Nhập từ khóa...">
+                            <!-- <button class="fa fa-search" type="submit" id="searchsubmit"></button> -->
+                            <button class="search">Tìm</button>
+                        </form>
+                    </div>
+                    <div class="beta-comp">
+                        <div class="cart" id="cart">
+                            <div class="cart-select"><i class="fa fa-shopping-cart cart-icon"></i>Giỏ hàng<span class="badge">3</span></div>
+                            <div class="cart-dropdown" id="cart-drop">
+                                <ul class="cart-items">
+                                    <li>
+                                        <img src="images/products/cart/1.png" alt="item1">
+                                        <span class="item-name">Sample Woman Top</span>
+                                        <span class="item-price">$59.99</span>
+                                        <span class="item-quantity">Số lượng: 01</span>
+                                    </li>
+                                    <li>
+                                            <img src="images/products/cart/1.png" alt="item1">
+                                            <span class="item-name">Sample Woman Top</span>
+                                            <span class="item-price">$59.99</span>
+                                            <span class="item-quantity">Số lượng: 01</span>
+                                    </li>
+                                    <li>
+                                            <img src="images/products/cart/1.png" alt="item1">
+                                            <span class="item-name">Sample Woman Top</span>
+                                            <span class="item-price">$59.99</span>
+                                            <span class="item-quantity">Số lượng: 01</span>
+                                    </li>
+                                </ul>
+                                <div class="caption-cart">
+                                    <div class="cart-total">Tổng tiền: <span>125000 đồng</span></div>
+                                    <div class="clearfix"></div>
+                                    <div class="cart-order">
+                                        <button class="order">Đặt hàng</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="header-bottom" style="background: #0277b8;">
+                <div class="container">
+                    <nav class="main-menu">
+                        <ul class="l-inline ov">
+                            <li class="parent-active"><a href="{{route('home-page')}}">Trang chủ</a></li>
+                            <li><a href="">Sản phẩm</a>
+                                <ul class="sub-menu">
+                                    @foreach($product_type as $item)
+                                    <li><a href="{{route('product-type',[$item->id])}}">{{$item['name']}}</a></li>
+                                    @endforeach
+                                </ul>
+                            </li>
+                            <li><a href="about.html">Giới thiệu</a></li>
+                            <li><a href="contacts.html">Liên hệ</a></li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </nav>
+                </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="grid">
+                    <div class="grid_item">
+                        <div class="space-50"></div>
+                        <h1>Tạo tài khoản </h1>
+                        <div class="form-vertical">
+                            <form>
+                                <input type="text" id="FirstName" class="input-full" placeholder="Họ tên">
+                                <input type="text" id="FirstName" class="input-full" placeholder="Email">
+                                <input type="text" id="FirstName" class="input-full" placeholder="Mật khẩu">
+                                <input type="text" id="FirstName" class="input-full" placeholder="Gõ lại mật khẩu">
+                                <p>
+                                    <input type="submit" value="Đăng ký" class="btn btn-full">
+                                </p>
+                                <a href="">Trở về</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <footer class="bground-footer">
+            
+        <div class="container ">
+            <div class="space-50"></div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="footer">
+                        <h4><span>Thông tin</span></h4>
+                        <ul class="list-info list-style">
+                            <li class="item-footer">
+                                <div class="company">
+                                    <i class="fa fa-map-marker ddiem"></i><span>Công ty ABC</span>
+                                </div>
+                                <div class="address">Địa chỉ: 123 Đường A - Hà Nội</div>
+                                <div class="phone">Hotline:<a href="tel:123456" title="phone">123456</a></div>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="footer">
+                        <h4><span>Đăng ký nhận tin</span></h4>
+                        <p>Đăng ký để cập nhật những thông tin mới nhất từ chúng tôi.</p>
+                        <form class="nhan-info" method="POST" action="">
+                            <input type="email" placeholder="Nhập địa chỉ mail của bạn" name="email" id="email">
+                            <button class="button-footer">
+                                <i class="fa fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="footer">
+                        <h4><span>Giới thiệu</span></h4>
+                        <ul class="list-menu-footer list-style" style="display:block;">
+                            <li><a href="index.html">Trang chủ</a></li>
+                            <li><a href="product_type.html">Sản phẩm</a></li>
+                            <li><a href="about.html">Giới thiệu</a></li>
+                            <li><a href="contacts.html">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="footer">
+                        <h4><span>Liên hệ</span></h4>
+                        <p>Thứ 2 - Thứ 6: 6am - 9pm
+                            <br>
+                            Thứ 7 - Chủ Nhật: 6am - 10pm
+                        </p>
+                        <ul class="list-media list-style">
+                            <li>
+                                <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/"><i class="fa fa-youtube"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="last-f">&copy; Design by Trang 2019</div>
+    </footer>
+</body>
+</html>
