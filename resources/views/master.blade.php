@@ -126,7 +126,7 @@
                                         </p>
                                     </div>
                                     <div class="product-caption">
-                                        <a class="add-to-cart" href="cart.html">
+                                        <a class="add-to-cart" href="{{route('addcart', $item->id)}}">
                                             <i class="fa fa-shopping-cart"></i>
                                         </a>
                                         <!-- <a class="beta-btn primary" href="product.html">Details<i class="fa fa-chevron-right"></i></a> -->
@@ -151,15 +151,32 @@
                                 <h3>Đặt online ngay!</h3>
                             </div>
                             <div class="order-content">
-                                <form>
+                                <form action="{{route('home-page')}}" method="POST">
+                                @if($errors->any())
+                                    <div class="alert alert-danger">
+                                        <ul>
+                                        @foreach($errors->all() as $error)
+                                        <li>{{$error }}</li>
+                                        @endforeach
+                                        </ul>
+                                    </div>
+                                @endif
+                                @if(Session::has('success'))
+                                    <div class="alert alert-success">
+                                        {{Session::get('success')}}
+                                    </div>
+                                @endif
+                                <input type="hidden" name="_token" value="{{csrf_token()}}">
                                     <label for="ContactFormName">Họ tên</label>
-                                    <input type="text" id="ContactFormName" class="input-full">
+                                    <input type="text" id="ContactFormName" name="name" class="input-full">
                                     <label for="ContactFormEmail">Địa chỉ email</label>
-                                    <input type="text" id="ContactFormEmail" class="input-full">
+                                    <input type="text" id="ContactFormEmail" name="email" class="input-full">
                                     <label for="ContactFormPhone">Số điện thoại</label>
-                                    <input type="text" id="ContactFormPhone" class="input-full">
+                                    <input type="text" id="ContactFormPhone" name="phone" class="input-full">
                                     <label for="ContactFormMessage">Nội dung</label>
-                                    <textarea rows="5" id="ContactFormMessage" class="input-full"></textarea>
+                                    <textarea rows="5" id="ContactFormMessage" name="message" class="input-full"></textarea>
+                                    <div class="space-20"></div>
+                                    <button type="submit" class="btn btn-full">Đặt ngay</button>
                                 </form>
                             </div>
                         </div>

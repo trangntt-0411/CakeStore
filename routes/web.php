@@ -20,6 +20,11 @@ Route::get('index', [
     'uses'=>'PageController@getIndex'
 ]);
 
+Route::post('index', [
+    'as'=>'home-page',
+    'uses'=>'PageController@postIndex'
+]);
+
 Route::get('product-type/{type}',[
     'as'=>'product-type',
     'uses'=>'PageController@getProductType'
@@ -67,10 +72,19 @@ Route::get('remove-item/{id}',[
 ]);
 
 
-
 Route::get('search', [
     'as'=>'search',
     'uses'=>'PageController@getSearch'
+]);
+
+Route::get('checkout', [
+    'as'=>'checkout',
+    'uses'=>'PageController@getCheckout'
+]);
+
+Route::post('checkout', [
+    'as'=>'checkout',
+    'uses'=>'PageController@postCheckout'
 ]);
 
 

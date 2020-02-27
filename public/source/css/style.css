@@ -191,6 +191,89 @@ a i {
 }
 
 
+/*==============================
+    PAGE CART
+================================*/
+.table-wrap {
+    max-width: 100%;
+}
+.cart-table {
+    width: 100%;
+}
+
+.cart-table th {
+    padding: 30px 15px;
+    border: none;
+    font-size: 18px;
+}
+.cart-row {
+    border-top: 1px solid #e6e6e6;
+}
+.cart-row td {
+    padding: 30px 15px;
+    border: none;
+    text-align: center;
+}
+.text-center {
+    text-align: center !important;
+}
+.cart-image img {
+    width: 250px;
+}
+.cart-namep {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+    padding: 20px;
+}
+.cart-remove {
+    font-size: 15px;
+}
+.cart-info {
+    font-size: 18px;
+}
+.inf_p {
+    text-align: left !important;
+}
+
+.check-form {
+    margin-left: -15px;
+}
+.check-form label {
+    font-size: 15px;
+    padding: 0;
+    height: 15px;
+}
+.check-form input {
+    margin-bottom: 25px;
+    height: 30px;
+}
+.check-form textarea {
+    height: 60px;
+}
+.inf-checkout {
+    text-align: right;
+    margin-right: -15px;
+}
+.inf-checkout p {
+    font-size: 15px;
+}
+.checkout-total {
+    font-size: 20px;
+    color: blue;
+    font-weight: bold;
+}
+.checkout-btn {
+    font-size: 15px;
+    padding: 11px 15px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    background: royalblue;
+    margin: 15px 0px 0px 12px;
+}
+
 
 /*==============================
     SUBMENU
@@ -847,7 +930,7 @@ input[type=checkbox].circle:checked ~ .click-circle::after {
 ===================================*/
 #home-order {
     background-image: url("../images/slide/banner2.jpg");
-    height: 600px;
+    height: 700px;
     background-size: cover;
     background-repeat: no-repeat;
     padding: 50px 0;
@@ -856,7 +939,7 @@ input[type=checkbox].circle:checked ~ .click-circle::after {
 .order-form {
     background: rgba(0, 0, 0, 0.5);
     width: 500px;
-    height: 500px;
+    height: 640px;
     border-radius: 10px;
     margin: 0 0 0 60px;
     padding: 15px;
@@ -922,7 +1005,6 @@ input[type=checkbox].circle:checked ~ .click-circle::after {
     border: 1px solid #e5e5e5;
     font-size: 13px;
 }
-
 #sort li:hover>ul {
     visibility: visible;
 } */

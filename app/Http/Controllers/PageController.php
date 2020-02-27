@@ -10,6 +10,10 @@ use App\Product;
 use App\ProductType;
 use App\User;
 use App\Cart;
+use App\Customer;
+use App\Bill;
+use App\BillDetail;
+use App\OrderCustomer;
 use Session;
 
 use Hash;
@@ -23,6 +27,17 @@ class PageController extends Controller
             return view('master', compact('slide','new_product','sale_product'));        
     }
 
+    public function postIndex(Request $req) {
+        $order_customer = new OrderCustomer;
+        $order_customer->name = $req->name;
+        $order_customer->email = $req->email;
+        $order_customer->phone = $req->phone;
+        $order_customer->message = $req->message;
+
+        $order_customer->save();
+        return redirect()->back()->with('success', 'Cảm ơn bạn đã liên hệ với chúng tôi. Chúng tôi sẽ hồi âm bạn sớm nhất có thể.');
+    }
+
     public function getProductType($type) {
         $product = Product::where('id_type', $type)->paginate(8);
         $p_type_name = ProductType::all();
@@ -33,7 +48,7 @@ class PageController extends Controller
 
     public function getProduct($id) {
         $product = Product::where('id', $id)->first();
-        $p_type = Product::where('id', '<>', $id)->paginate(3);
+        $p_type = Product::where('id', '<>', $id)->paginate(4);
 
         return view('page.product', compact('product', 'p_type'));
     }
@@ -86,7 +101,6 @@ class PageController extends Controller
                 'email.required'=>'Vui lòng nhập email',
                 'email.email'=>'Không đúng đinh dạng email',
                 'password.required'=>'Vui lòng nhập mật khẩu',
-                'repassword.required'=>'Vui lòng nhập lại mật khẩu',
                 'password.min'=>'Mật khẩu chứa tối thiểu 6 kí tự',
                 'password.max'=>'Mật khẩu chứa tối đa 20 kí tự'
             ]);
@@ -128,5 +142,42 @@ class PageController extends Controller
                             ->orWhere('unit_price', $req->key)
                             ->get();
         return view('page.search', compact('product'));
+    }
+
+    public function getCheckout() {
+     
+        return view('page.cart');
+    }
+
+    public function postCheckout(Request $req) {
+        $cart = Session::get('cart');
+
+        $customer = new Customer;
+        $customer->name = $req->name;
+        $customer->address = $req->address;
+        $customer->phone_number = $req->phone;
+        $customer->note = $req->message;
+        
+        $customer->save();
+
+        $bill = new Bill;
+        $bill->id_customer = $customer->id;
+        $bill->date_order = date('Y-m-d');
+        $bill->total = $cart->totalPrice;
+        $bill->note = $req->message;
+
+        $bill->save();
+        
+        foreach($cart->items as $key => $value) {
+            $bill_detail = new BillDetail;
+            $bill_detail->id_bill = $bill->id;
+            $bill_detail->id_product = $key;
+            $bill_detail->quantity = $value['qty'];
+            $bill_detail->unit_price = ($value['price'])/($value['qty']);
+            $bill_detail->save();
+        }
+        Session::forget('cart');
+        return redirect()->back()->with('thongbao', 'Đặt hàng thành công');
+
     }
 }

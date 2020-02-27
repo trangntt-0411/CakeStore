@@ -60,7 +60,7 @@
                                 <div class="cart-total">Tổng tiền: <span>{{$totalPrice}}</span></div>
                                 <div class="clearfix"></div>
                                 <div class="cart-order">
-                                    <button class="order">Đặt hàng</button>
+                                    <a href="{{route('checkout')}}"><button class="order">Đặt hàng</button></a>
                                 </div>
                             </div>
                         </div>

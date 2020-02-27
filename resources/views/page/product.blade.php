@@ -16,7 +16,7 @@
     <!-- header -->
     @include('header');
 
-    <div class="bread-crumb">
+    <!-- <div class="bread-crumb">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
@@ -40,14 +40,14 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- end header -->
 
     <!-- content -->
     <div class="container">
         <div class="space-50"></div>
         <div class="row">
-            <div class="col-sm-9">
+            <div class="col-sm-12">
                 <div class="row">
                     <div class="col-sm-4">
                         <img src="{{URL::to('source/images/product')}}/{{$product['image']}}">
@@ -74,20 +74,22 @@
                                 <div class="soluong">
                                     <label class="lb_soluong">Số lượng</label>
                                     <div class="p_number">
-                                        <button class="button_quty button_quty_left">
+                                        <button class="button_quty button_quty_left" id="left">
                                             <i class="fa fa-minus"></i>
                                         </button>
-                                        <input type="text" id="quty" class="p_quantity">
-                                        <button class="button_quty button_quty_right">
+                                        
+                                        <input type="text" id="quty" value="1" class="p_quantity">
+                                        <button class="button_quty button_quty_right" id="right">
                                             <i class="fa fa-plus"></i>
                                         </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                         <div class="button_addcart">
-                            <button type="submit" class="add_cart">
-                                <span class="btn_addcart_text">Thêm vào giỏ hàng</span>
+                            <button type="submit" class="add_cart" id="add_cart">
+                                <span class="btn_addcart_text"><a href="{{route('addcart', $product['id'])}}">Thêm vào giỏ hàng</a></span>
                             </button>
                         </div>
                     </div>
@@ -106,7 +108,7 @@
                         <div class="tab_float">
                             <div id="tab1" class="tab_content">
                                 <div class="tf_content" id="Thông tin sản phẩm">
-                                    <p>1 Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.Consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequaturuis autem vel eum iure reprehenderit qui in ea voluptate velit es quam nihil molestiae consequr, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+                                    <p>{{$product->description}}</p>
                                 </div>
                             </div>
                             <div id="tab2" class="tab_content">
@@ -123,7 +125,7 @@
                     <h4>Có thể bạn sẽ thích</h4>
                     <div class="row">
                         @foreach($p_type as $item)
-                        <div class="col-sm-4">
+                        <div class="col-sm-3">
                             <div class="product">
                                 <div class="product-header">
                                     <a href="{{route('product', [$item->id])}}"><img src="{{URL::to('source/images/product')}}/{{$item['image']}}" alt=""></a>
@@ -152,10 +154,12 @@
                         </div>
                         @endforeach
                     </div>
+                    <div class="page_paginate">
+                        {{$p_type->links()}}
+                    </div>
                 </div>
-
             </div>
-            <div class="col-sm-3">
+            <!-- <div class="col-sm-3">
                 <div class="product_left">
                     <h3 class="p_left-title">Sản phẩm liên quan</h3>
                     <div class="p_left-body">
@@ -255,7 +259,7 @@
                         
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
     <!-- end content -->
@@ -263,6 +267,6 @@
     <!-- footer -->
     @include('footer');
 
-    <script src="app.js"></script>
+    <script src="{{URL::to('source/app.js')}}"></script>
 </body>
 </html>

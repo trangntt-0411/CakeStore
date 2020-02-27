@@ -38,3 +38,19 @@ ttsp.addEventListener('click',()=>{
     var id = ttsp.textContent;
     showContent(id);
 });
+
+var btn_left = document.getElementById('left');
+var btn_right = document.getElementById('right');
+var qty = document.getElementById('quty');
+var btn_add = document.getElementById('add_cart');
+
+btn_left.addEventListener('click', ()=>{
+    if(qty.value > 1) {
+        qty.value --;
+    }
+});
+btn_right.addEventListener('click', ()=>{
+    qty.value ++;
+});
+
+
