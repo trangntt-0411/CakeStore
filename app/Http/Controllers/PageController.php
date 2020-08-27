@@ -32,7 +32,7 @@ class PageController extends Controller
         $order_customer->name = $req->name;
         $order_customer->email = $req->email;
         $order_customer->phone = $req->phone;
-        $order_customer->message = $req->message;
+       // $order_customer->message = $req->message;
 
         $order_customer->save();
         return redirect()->back()->with('success', 'Cảm ơn bạn đã liên hệ với chúng tôi. Chúng tôi sẽ hồi âm bạn sớm nhất có thể.');
